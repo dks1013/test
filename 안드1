@@ -1,0 +1,7 @@
+const onLoad = Module.findExportByName("libXXX.so", "JNI_OnLoad");
+
+Interceptor.attach(onLoad, {
+    onEnter(args) {
+        console.log("JNI_OnLoad entered");
+    }
+});
